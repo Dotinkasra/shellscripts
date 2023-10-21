@@ -1,0 +1,3 @@
+#!/bin/bash
+disk=$(diskutil unmountDisk /Volumes/RamDisk | tr -s ' ' | awk '{ print $6 }')
+hdiutil detach /dev/$disk

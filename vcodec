@@ -1,0 +1,2 @@
+#!/bin/zsh
+ffprobe -i "./$1" 2>&1 | grep Stream | grep Video | awk '{print $4}'

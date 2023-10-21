@@ -1,0 +1,4 @@
+#!/bin/bash
+disk=$(hdiutil attach -nomount ram://16777216)
+newfs_apfs -v "RamDisk" $disk
+diskutil mountDisk $disk
