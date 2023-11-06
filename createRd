@@ -1,4 +1,9 @@
 #!/bin/bash
+
+# This script is creating RAM disk on macOS.
+# The method of calculation to size of the RAM disk is below
+# 1MB = 2048 blocks, for example, 16777216 / 2048 = 8192MB(8GB)
+
 disk=$(hdiutil attach -nomount ram://16777216)
 newfs_apfs -v "RamDisk" $disk
 diskutil mountDisk $disk

@@ -1,2 +1,5 @@
 #!/bin/zsh
+
+# ffmpeg is needed to make this work.
+# This script outputs the video codec of the video received in the argument.
 ffprobe -i "./$1" 2>&1 | grep Stream | grep Video | awk '{print $4}'

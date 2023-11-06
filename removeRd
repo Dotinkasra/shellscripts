@@ -1,3 +1,5 @@
 #!/bin/bash
+
+# Unmount the RAM disk created by the included script when executed.
 disk=$(diskutil unmountDisk /Volumes/RamDisk | tr -s ' ' | awk '{ print $6 }')
 hdiutil detach /dev/$disk

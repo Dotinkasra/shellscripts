@@ -1,3 +1,6 @@
 #!/bin/sh
+
+# Restart 'coreaudiod' on macOS
+# When this script is running, all sounds and all input devices are stopped.
 sudo launchctl stop com.apple.audio.coreaudiod
 sudo launchctl start com.apple.audio.coreaudiod
